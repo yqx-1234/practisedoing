@@ -9,6 +9,19 @@ void Tpad_init(){
 }
 
 
+
+/*********Tpad扫描函数*******/
+/*****判断Tpad是否被按下*****/
+u8 Tpad_scan(){
+u8 res=0;//the flag of button
+rval=Tpad_getVal();//测量当前电容充电时间
+if((rval>DEFINE_VAL)&&(rval<MAX_VAL){
+
+}
+
+}
+
+
 void Tpad_timer2(u32 arr,u16 psc){
 	GPIO_InitTypeDef GPIO_InitStructure;
 	TIM_TimeBaseInitTypeDef TIM_InitStructure;
@@ -32,9 +45,4 @@ void Tpad_timer2(u32 arr,u16 psc){
 	
 	TIM_ICInitStructure.TIM_Channel=TIM_Channel_1;
 	TIM_ICInitStructure.TIM_ICFilter=0x00;
-	
-
-
-
-
 }
